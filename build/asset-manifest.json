@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/k9p_app/src/App.js/static/css/main.523f09c5.chunk.css",
+    "main.js": "/k9p_app/src/App.js/static/js/main.f6d90ec1.chunk.js",
+    "main.js.map": "/k9p_app/src/App.js/static/js/main.f6d90ec1.chunk.js.map",
+    "runtime-main.js": "/k9p_app/src/App.js/static/js/runtime-main.9dfb61e5.js",
+    "runtime-main.js.map": "/k9p_app/src/App.js/static/js/runtime-main.9dfb61e5.js.map",
+    "static/js/2.3efd4cba.chunk.js": "/k9p_app/src/App.js/static/js/2.3efd4cba.chunk.js",
+    "static/js/2.3efd4cba.chunk.js.map": "/k9p_app/src/App.js/static/js/2.3efd4cba.chunk.js.map",
+    "index.html": "/k9p_app/src/App.js/index.html",
+    "precache-manifest.6d13e34186825fbee9a563a7e3ec2a13.js": "/k9p_app/src/App.js/precache-manifest.6d13e34186825fbee9a563a7e3ec2a13.js",
+    "service-worker.js": "/k9p_app/src/App.js/service-worker.js",
+    "static/css/main.523f09c5.chunk.css.map": "/k9p_app/src/App.js/static/css/main.523f09c5.chunk.css.map",
+    "static/js/2.3efd4cba.chunk.js.LICENSE.txt": "/k9p_app/src/App.js/static/js/2.3efd4cba.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/k9p_app/src/App.js/static/media/logo.ee7cd8ed.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9dfb61e5.js",
+    "static/js/2.3efd4cba.chunk.js",
+    "static/css/main.523f09c5.chunk.css",
+    "static/js/main.f6d90ec1.chunk.js"
+  ]
+}
