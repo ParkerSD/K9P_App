@@ -374,7 +374,7 @@ Or more advanced usage with control of the connection
 
     debug : 1,
     /// Should we use flow control? Default is true
-    flowControl : true,
+    flowControl : false,
     /// Used internally to write log information - you can replace this with your own function
     log : function(level, s) { if (level <= this.debug) console.log("<BLE> "+s)},
     /// Called with the current send progress or undefined when done - you can replace this with your own function
