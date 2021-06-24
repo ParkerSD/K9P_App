@@ -1,8 +1,8 @@
 {
-  "homepage": "http://parkersd.github.io/k9p_app",
   "name": "k9p_app",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://parkersd.github.io/k9p_app",
   "dependencies": {
     "@material-ui/core": "^4.9.10",
     "@testing-library/jest-dom": "^4.2.4",
