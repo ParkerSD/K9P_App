@@ -98,7 +98,13 @@ class App extends Component {
             </Button>
 
           </p>
+          <p>
+            <text style={{ fontSize: 15 }}>
+              Mantel Technologies
+            </text>
+          </p>
         </header>
+
       </div>
     );
   }
