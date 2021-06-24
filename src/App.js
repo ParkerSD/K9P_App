@@ -39,6 +39,8 @@ const stopByte = "B";
 
 
 
+
+
 class App extends Component {
   constructor(props) {
     super(props)
@@ -49,17 +51,13 @@ class App extends Component {
 }
   
 
-  
-saveFileCallback = () => {
+  saveFileCallback = () => {
 
     var file = this.state.dataBuffer;
-
     file = puck.data;
-
     console.log(file);
-
     save(file, 'data.txt')
-
+    return; 
   }
 
 
@@ -68,9 +66,12 @@ saveFileCallback = () => {
     puck.write(header, null);
   }
   
-  stopHandler = () => {
+  stopHandler = async () => {
+
+    this.saveFileCallback();
+
     var header = stopByte;
-    puck.write(header, this.saveFileCallback);
+    puck.write(header, null);
   }
 
   render(){
@@ -84,7 +85,7 @@ saveFileCallback = () => {
               style={{
                 position: 'relative',
                 right: 10,
-          		}}> 
+              }}> 
               Start 
             </Button>
         
@@ -92,7 +93,7 @@ saveFileCallback = () => {
                 style={{
                 position: 'relative',
                 left: 10,
-          		}}> 
+              }}> 
               Stop
             </Button>
 
