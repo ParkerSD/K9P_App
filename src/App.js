@@ -1,24 +1,16 @@
-import logo from './logo.svg';
+import logo from "./img/mantel logo.png";
 import './App.css';
 import Button from '@material-ui/core/Button';
 import handleClick from './handleClick';
 import {bleScan, callbackTx, callbackHeaderTx} from './ble';
 import { styled } from '@material-ui/core/styles';
 import Box from '@material-ui/core/Box';
-import { borders } from '@material-ui/system';
-import { compose, spacing, palette } from '@material-ui/system';
 import React, { Component } from 'react';
 import puck from './puck';
-import Input from '@material-ui/core/Input';
-import Select from '@material-ui/core/Select';
 import { makeStyles } from '@material-ui/core/styles';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormHelperText from '@material-ui/core/FormHelperText';
-import FormControl from '@material-ui/core/FormControl';
-import TextField from '@material-ui/core/TextField';
-import InputAdornment from '@material-ui/core/InputAdornment';
 import { save } from 'save-file';
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -39,8 +31,6 @@ const stopByte = "B";
 
 
 
-
-
 class App extends Component {
   constructor(props) {
     super(props)
@@ -49,15 +39,14 @@ class App extends Component {
       dataBuffer: null,
     };
 }
-  
 
   saveFileCallback = () => {
-
     var file = this.state.dataBuffer;
     file = puck.data;
     console.log(file);
-    save(file, 'data.txt')
-    return; 
+    if(file !== null){
+      save(file, 'data.txt')
+    }
   }
 
 
@@ -66,10 +55,9 @@ class App extends Component {
     puck.write(header, null);
   }
   
-  stopHandler = async () => {
 
+  stopHandler = () => {
     this.saveFileCallback();
-
     var header = stopByte;
     puck.write(header, null);
   }
@@ -77,10 +65,9 @@ class App extends Component {
   render(){
     return (
       <div className="App">
-        <header className="App-header">
-          <h2>K9 Phys App</h2>
-
-          <p>
+        <header className="App-header"> 
+          <h2>K9P App</h2>
+           <p>
             <Button variant="outlined" color="primary" size="large" onClick={this.startHandler} 
               style={{
                 position: 'relative',
@@ -96,15 +83,26 @@ class App extends Component {
               }}> 
               Stop
             </Button>
+          </p>
+          <br/>
 
-          </p>
-          <p>
-            <text style={{ fontSize: 15 }}>
-              Mantel Technologies
-            </text>
-          </p>
+          <div style={{fontSize: 10}}>
+            View Data Feed <br/> Right Click -> Inspect -> Console
+          </div>
+         
+
+          <br/>
+          <br/>
+          <br/>
+          <br/>
+          
+          
+          <img src={logo} alt="Logo" width="30" height="20"/>
+          <div style={{ fontSize: 15}}> 
+            Mantel Technologies
+          </div>
+          
         </header>
-
       </div>
     );
   }
